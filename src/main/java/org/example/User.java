@@ -49,10 +49,18 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        if(phoneNumber.length()<8){
+        if (phoneNumber.length() < 8) {
             System.out.println("Debe Ingresar un numero mayor de 8 digitos");
-        }else if(phoneNumber.length()==8){
+        } else if (phoneNumber.length() == 8) {
             this.phoneNumber = phoneNumber;
         }
     }
+
+    @Override
+    public String toString() {
+        return " User: " + name + ", Email: " + email +
+                "\n Address: " + address + " ,Telefono: " + phoneNumber;
+    }
 }
+
+

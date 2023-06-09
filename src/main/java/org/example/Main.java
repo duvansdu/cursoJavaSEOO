@@ -31,6 +31,7 @@ public class Main {
         Paciente myPaciente = new Paciente("Carlos Sanchez", "carlos@gmail.com");
         myPaciente.setWeight(54.6);
         System.out.println(myPaciente.getWeight());
+        System.out.println(myPaciente);
 
         myPaciente.setPhoneNumber("1234567");
         System.out.println(myPaciente.getPhoneNumber());
