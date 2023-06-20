@@ -1,30 +1,35 @@
-package org.example;
+package org.example.model;
 
-public class Paciente extends User{
-   //Atributos
+public class Patient extends User {
+    //Atributos
     private String birthday;
     private double weight;
     private double height;
     private String blood;
-    Paciente(String name, String email){
-        super(name, email);
-    }
-    public void setWeight(double weight){
-        this.weight = weight;
-    }
-    public String getWeight(){
-        return this.weight + "kg.";
+
+    public Patient(String name, String email){
+        super(name,email);
+        //mas instrucciones
     }
 
+    // 54.5
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    // 54.5 Kg. String
+    public String getWeight(){
+        return this.weight + " Kg.";
+    }
+
+
     public String getHeight() {
-        return height + "Mts.";
+        return height + " Mts.";
     }
 
     public void setHeight(double height) {
         this.height = height;
     }
-
-
 
     public String getBirthday() {
         return birthday;
@@ -33,7 +38,6 @@ public class Paciente extends User{
     public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
-
 
     public String getBlood() {
         return blood;
@@ -45,6 +49,7 @@ public class Paciente extends User{
 
     @Override
     public String toString() {
-        return super.toString() + "\n Age "+ birthday + "\n peso"+ getWeight();
+        return super.toString() + "\nAge: " + birthday + "\n Weight: " +getWeight()+ "\n Height"+getHeight()+"\nBlood"+blood;
     }
+
 }
