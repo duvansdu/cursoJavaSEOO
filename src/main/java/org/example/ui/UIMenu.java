@@ -1,5 +1,9 @@
 package org.example.ui;
 
+import org.example.model.Doctor;
+import org.example.model.Patient;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIMenu {
@@ -36,6 +40,21 @@ public class UIMenu {
             }
         }while (response != 0);
     }
+    private static void authUser(int userType){
+        //userType = 1 Doctor
+        //userType = 2 Patient
+
+        ArrayList<Doctor> doctors = new ArrayList<>();
+        doctors.add(new Doctor("Alejandro Martinez", "alejandrom@mail.com"));
+        doctors.add(new Doctor("Carlos Hernandez", "carlosh@mail.com"));
+        doctors.add(new Doctor("Javier Sanchez", "javiersanchez@gmail.com"));
+
+        ArrayList<Patient> patients = new ArrayList<>();
+        patients.add(new Patient("CARLOS", "cart@gmail.com"));
+        patients.add(new Patient("andres Suarez", "weerqw@gmail.com"));
+
+    }
+
 
     static void showPatientMenu(){
         int response = 0;
