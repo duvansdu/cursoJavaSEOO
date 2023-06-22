@@ -26,10 +26,12 @@ public class UIMenu {
             switch (response){
                 case 1:
                     System.out.println("model.Doctor");
+                    response = 0;
+                    authUser(1);
                     break;
                 case 2:
                     response = 0;
-                    showPatientMenu();
+                    authUser(2);
 
                     break;
                 case 0:
@@ -52,7 +54,18 @@ public class UIMenu {
         ArrayList<Patient> patients = new ArrayList<>();
         patients.add(new Patient("CARLOS", "cart@gmail.com"));
         patients.add(new Patient("andres Suarez", "weerqw@gmail.com"));
+        patients.add(new Patient("Javier Zuluga", "javierZuluaga@gmail.com"));
 
+
+        boolean emailCorrect = false;
+        do{
+            System.out.println("Ingresa Correo Electronico: [a@a.com]");
+            Scanner sc2 = new Scanner(System.in);
+            String email = sc2.nextLine();
+            if(userType ==1){
+                
+            }
+        }while(!emailCorrect);
     }
 
 
@@ -77,7 +90,7 @@ public class UIMenu {
                     break;
                 case 2:
                     System.out.println("::My appointments");
-                    break;
+                  break;
                 case 0:
                     showMenu();
                     break;
