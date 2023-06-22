@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class UIMenu {
 
     public static String[] MONTHS = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
-
+    public static Doctor doctorLogged;
+    public static Patient patientLogged;
     public static void showMenu(){
         System.out.println("Welcome to My Appointments");
         System.out.println("Selecciona la opción deseada");
@@ -63,7 +64,23 @@ public class UIMenu {
             Scanner sc2 = new Scanner(System.in);
             String email = sc2.nextLine();
             if(userType ==1){
-                
+                for(Doctor d: doctors){
+                    if(d.getEmail().equals(email))
+                    {
+                        emailCorrect = true;
+                        //Obtener el usuario logeado
+                        doctorLogged = d;
+                        //ShowDoctorMenu
+                    }
+                }
+            }
+            if(userType ==2){
+                for(Patient p: patients){
+                    if(p.getEmail().equals(email)){
+                        emailCorrect = true;
+                        patientLogged = p;
+                    }
+                }
             }
         }while(!emailCorrect);
     }
